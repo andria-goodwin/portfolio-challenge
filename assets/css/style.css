@@ -1,0 +1,22 @@
+header {
+    display: flex;
+}
+
+.profile {
+    height: 200px;
+}
+
+.background {
+    height: 200px;
+    width: 100%;
+}
+
+#first-app img {
+    height: 400px;
+    width: 100%;
+}
+
+#second-app img, #third-app img, #fourth-app img, #fifth-app img {
+    height: 200px;
+    width: 50%;
+}
