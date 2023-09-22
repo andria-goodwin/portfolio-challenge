@@ -39,8 +39,7 @@ header h1 {
 #first-app {
     height: 400px;
     width: 100%;
-    background-image: url(../images/placeholder-image.gif);
-
+    background-image: url(../images/AG-PSG.png);
 }
 
 #second-app, #third-app, #fourth-app, #fifth-app {
