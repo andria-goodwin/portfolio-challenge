@@ -33,17 +33,46 @@ header h1 {
 }
 
 .card {
+    position: relative;
     float: left;
 }
 
 #first-app {
-    height: 400px;
+    height: 500px;
     width: 100%;
-    background-image: url(../images/AG-PSG.png);
+}
+
+#first-app img {
+    height: 500px;
+    width: 100%;
+}
+
+#first-app .title {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 300%;
+    background-color: grey;
+    color:blueviolet;
 }
 
 #second-app, #third-app, #fourth-app, #fifth-app {
-    height: 200px;
+    height: 250px;
     width: 50%;
-    background-image: url(../images/placeholder-image.gif);
+}
+
+#second-app img, #third-app img, #fourth-app img, #fifth-app img {
+    height: 250px;
+    width: 100%;
+}
+
+#second-app .title, #third-app .title, #fourth-app .title, #fifth-app .title {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 175%;
+    background-color: grey;
+    color:blueviolet;
 }
