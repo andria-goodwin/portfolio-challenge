@@ -2,34 +2,53 @@ header {
     position: relative;
     top: 0;
     left: 0;
-    height: 200px;
+    height: 20vw;
     width: 100%;
     background-image: url(../images/placeholder-image.gif);
-    display: block;
-    font-family: Arial, Helvetica, sans-serif;
+    /* display: block; */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-header h1 {
-    margin-left: 3%;
-    font-size: 500%;
+h1, nav {
+    text-align: left;
+}
+
+h1 {
+    padding-top: 3%;
+    padding-left: 5%;
+    font-size: 6vw;
+}
+
+ul {
+    font-size: 2vw;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 .navigation {
     display: inline;
+    font-size: 2vw;
+    padding-left: 5%
+}
+
+li:not(:last-child) {
     margin-right: 5%;
-    font-size: 175%;
 }
 
 .profile {
     position: absolute;
     top: 0;
     right: 0;
-    height: 200px;
+    height: 20vw;
 }
 
-.background {
-    height: 200px;
-    width: 100%;
+h2 {
+    font-size: 3vw;
+}
+
+p {
+    font-size: 2vw;
 }
 
 .card {
@@ -38,12 +57,12 @@ header h1 {
 }
 
 #first-app {
-    height: 500px;
+    max-height: 40%;
     width: 100%;
 }
 
 #first-app img {
-    height: 500px;
+    max-height: 40%;
     width: 100%;
 }
 
@@ -52,18 +71,18 @@ header h1 {
     top: 10px;
     left: 10px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 300%;
+    font-size: 3vw;
     background-color: grey;
     color:blueviolet;
 }
 
 #second-app, #third-app, #fourth-app, #fifth-app {
-    height: 250px;
+    max-height: 20vw;
     width: 50%;
 }
 
 #second-app img, #third-app img, #fourth-app img, #fifth-app img {
-    height: 250px;
+    max-height: 20vw;
     width: 100%;
 }
 
@@ -72,7 +91,42 @@ header h1 {
     top: 10px;
     left: 10px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 175%;
+    font-size: 2vw;
     background-color: grey;
     color:blueviolet;
 }
+
+/* Smartphone view */
+@media screen and (max-width: 600px) {
+    header {
+        height: 30vw;
+    }
+    
+    h1 {
+        font-size: 8vw;
+    }
+
+    .navigation {
+        font-size: 3vw;
+    }
+    
+    ul {
+        font-size: 3vw;
+    }
+
+    h2 {
+        font-size: 5vw;
+    }
+    
+    p {
+        font-size: 3vw;
+    }
+
+    #first-app .title {
+        font-size: 5vw;
+    }
+
+    #second-app .title, #third-app .title, #fourth-app .title, #fifth-app .title {
+        font-size: 3vw;
+    }
+  }
