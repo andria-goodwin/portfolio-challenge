@@ -51,22 +51,23 @@ p {
     font-size: 2vw;
 }
 
+main {
+    /* position: relative; */
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .card {
     position: relative;
-    float: left;
+    /* float: left; */
 }
 
 #first-app {
-    max-height: 40%;
+    max-height: 40vw;
     width: 100%;
 }
 
-#first-app img {
-    max-height: 40%;
-    width: 100%;
-}
-
-#first-app .title {
+#first-app h3 {
     position: absolute;
     top: 10px;
     left: 10px;
@@ -76,17 +77,17 @@ p {
     color:blueviolet;
 }
 
+#first-app img {
+    max-height: 40vw;
+    width: 100%;
+}
+
 #second-app, #third-app, #fourth-app, #fifth-app {
     max-height: 20vw;
     width: 50%;
 }
 
-#second-app img, #third-app img, #fourth-app img, #fifth-app img {
-    max-height: 20vw;
-    width: 100%;
-}
-
-#second-app .title, #third-app .title, #fourth-app .title, #fifth-app .title {
+#second-app h3, #third-app h3, #fourth-app h3, #fifth-app h3 {
     position: absolute;
     top: 10px;
     left: 10px;
@@ -94,6 +95,11 @@ p {
     font-size: 2vw;
     background-color: grey;
     color:blueviolet;
+}
+
+#second-app img, #third-app img, #fourth-app img, #fifth-app img {
+    max-height: 20vw;
+    width: 100%;
 }
 
 /* Smartphone view */
@@ -122,11 +128,17 @@ p {
         font-size: 3vw;
     }
 
-    #first-app .title {
+    #first-app h3 {
         font-size: 5vw;
     }
 
-    #second-app .title, #third-app .title, #fourth-app .title, #fifth-app .title {
+    #second-app h3, #third-app h3, #fourth-app h3, #fifth-app h3 {
         font-size: 3vw;
     }
+
+    #second-app, #third-app, #fourth-app, #fifth-app {
+        max-height: 30vw;
+        width: 100%;
+    }
+    
   }
