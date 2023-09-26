@@ -5,7 +5,6 @@ header {
     height: 20vw;
     width: 100%;
     background-image: url(../images/placeholder-image.gif);
-    /* display: block; */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -21,9 +20,6 @@ h1 {
 
 ul {
     font-size: 2vw;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
 }
 
 .navigation {
