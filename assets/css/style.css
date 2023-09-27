@@ -1,3 +1,15 @@
+:root {
+    --blue:rgb(109, 143, 160);
+    --text: black;
+    --rad: 5vw;
+    --light-blue: rgb(154, 159, 161);
+}
+
+body {
+    background-color: rgb(179, 179, 179);
+    font-family: monospace;
+}
+
 header {
     position: relative;
     top: 0;
@@ -5,7 +17,8 @@ header {
     height: 20vw;
     width: 100%;
     background-image: url(../images/placeholder-image.gif);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-size: 100%;
+    color: var(--text);
 }
 
 h1, nav {
@@ -15,7 +28,8 @@ h1, nav {
 h1 {
     padding-top: 3%;
     padding-left: 5%;
-    font-size: 6vw;
+    padding-bottom: 4%;
+    font-size: 6.75vw;
 }
 
 ul {
@@ -40,70 +54,125 @@ li:not(:last-child) {
 }
 
 h2 {
-    font-size: 3vw;
+    margin: 2%;
+    padding: 1%;
+    text-align: center;
+    font-size: 2.5vw;
+    background-color: var(--blue);
+    border-radius: var(--rad);
+    color: var(--text);
 }
 
 p {
     font-size: 2vw;
+    text-align: center;
+    color: var(--text);
+}
+
+a {
+    font-size: 2vw;
+    color: var(--text);
+}
+a:hover {
+    font-size: 3vw;
 }
 
 main {
-    /* position: relative; */
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+}
+
+main h2 {
+    width: 100%;
 }
 
 .card {
     position: relative;
-    /* float: left; */
 }
 
 #first-app {
     max-height: 40vw;
     width: 100%;
+    margin: 2%;
 }
 
 #first-app h3 {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 3vw;
-    background-color: grey;
-    color:blueviolet;
+    padding: 2%;
+    top: 10%;
+    left: 5%;
+    font-size: 4vw;
+    background-color: var(--blue);
+    color: var(--text);
+    border-radius: var(--rad);
+}
+
+#first-app h3:hover {
+    text-decoration: underline;
+    background-color: var(--light-blue);
 }
 
 #first-app img {
     max-height: 40vw;
     width: 100%;
+    border-radius: var(--rad);
+    filter: blur(3px);
+}
+
+#first-app img:hover {
+    filter: blur(0);
 }
 
 #second-app, #third-app, #fourth-app, #fifth-app {
     max-height: 20vw;
     width: 50%;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
 #second-app h3, #third-app h3, #fourth-app h3, #fifth-app h3 {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+    padding: 2%;
+    top: 10%;
+    left: 10%;
     font-size: 2vw;
-    background-color: grey;
-    color:blueviolet;
+    background-color: var(--blue);
+    color: var(--text);
+    border-radius: var(--rad);
+}
+
+#second-app h3:hover, #third-app h3:hover, #fourth-app h3:hover, #fifth-app h3:hover {
+    text-decoration: underline;
+    background-color: var(--light-blue);
 }
 
 #second-app img, #third-app img, #fourth-app img, #fifth-app img {
     max-height: 20vw;
     width: 100%;
+    border-radius: var(--rad);
+    filter: blur(3px);
+}
+
+#second-app img:hover, #third-app img:hover, #fourth-app img:hover, #fifth-app img:hover {
+    filter: blur(0);
+}
+
+footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer li {
+    display: inline;
+    margin-bottom: 3%;
 }
 
 /* Smartphone view */
-@media screen and (max-width: 600px) {
-    header {
-        height: 30vw;
-    }
-    
+@media screen and (max-width: 500px) {
     h1 {
         font-size: 8vw;
     }
@@ -117,15 +186,23 @@ main {
     }
 
     h2 {
-        font-size: 5vw;
+        font-size: 4vw;
     }
     
     p {
         font-size: 3vw;
     }
 
+    #first-app {
+        max-height: 40vw;
+    }
+
     #first-app h3 {
         font-size: 5vw;
+    }
+    
+    #first-app img {
+        max-height: 40vw;
     }
 
     #second-app h3, #third-app h3, #fourth-app h3, #fifth-app h3 {
@@ -135,6 +212,10 @@ main {
     #second-app, #third-app, #fourth-app, #fifth-app {
         max-height: 30vw;
         width: 100%;
+    }
+
+    #second-app img, #third-app img, #fourth-app img, #fifth-app img {
+        max-height: 30vw;
     }
     
   }
