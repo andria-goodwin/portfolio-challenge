@@ -64,9 +64,15 @@ h2 {
 }
 
 p {
+    margin-left: 2%;
+    margin-right: 2%;
     font-size: 2vw;
     text-align: center;
+    line-height: 150%;
     color: var(--text);
+    &:not(:last-child)  {
+        margin-bottom: 1%;
+    }
 }
 
 a {
