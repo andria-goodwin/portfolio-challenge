@@ -1,3 +1,4 @@
+/* common variables defined */
 :root {
     --blue:rgb(109, 143, 160);
     --text: black;
@@ -5,54 +6,13 @@
     --light-blue: rgb(154, 159, 161);
 }
 
+/* background color of webpage and page wide font */
 body {
     background-color: rgb(179, 179, 179);
     font-family: monospace;
 }
 
-header {
-    position: relative;
-    top: 0;
-    left: 0;
-    height: 20vw;
-    width: 100%;
-    background-image: url(../images/placeholder-image.gif);
-    background-size: 100%;
-    color: var(--text);
-}
-
-h1, nav {
-    text-align: left;
-}
-
-h1 {
-    padding-top: 3%;
-    padding-left: 5%;
-    padding-bottom: 4%;
-    font-size: 6.75vw;
-}
-
-ul {
-    font-size: 2vw;
-}
-
-.navigation {
-    display: inline;
-    font-size: 2vw;
-    padding-left: 5%
-}
-
-li:not(:last-child) {
-    margin-right: 5%;
-}
-
-.profile {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 20vw;
-}
-
+/* page wide: h2 properties */
 h2 {
     margin: 2%;
     padding: 1%;
@@ -63,6 +23,12 @@ h2 {
     color: var(--text);
 }
 
+/* page wide: all unordered lists font size */
+ul {
+    font-size: 2vw;
+}
+
+/* page wide: p properties */
 p {
     margin-left: 2%;
     margin-right: 2%;
@@ -70,33 +36,108 @@ p {
     text-align: center;
     line-height: 150%;
     color: var(--text);
+
+    /* space between paragraphs */
     &:not(:last-child)  {
         margin-bottom: 1%;
     }
 }
 
+/* page wide: clickable link properties */
 a {
     font-size: 2vw;
     color: var(--text);
 }
+
+/* page wide: clickable link effect on hover */
 a:hover {
     font-size: 3vw;
 }
 
+/* header: positioning and text properties */
+header {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 20vw;
+    width: 100%;
+    background-image: url(../images/placeholder-image.gif);
+    background-size: 100%;
+    color: var(--text);
+    text-align: left;
+}
+
+/* header: h1 (Andria Goodwin) properties */
+h1 {
+    padding-top: 3%;
+    padding-left: 5%;
+    padding-bottom: 4%;
+    font-size: 6.75vw;
+}
+
+/* header: navigation section properties and position */
+.navigation {
+    display: inline;
+    padding-left: 5%
+}
+
+/* header: navigation section separation of items */
+li:not(:last-child) {
+    margin-right: 5%;
+}
+
+/* header: profile image properties and position*/
+.profile {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 20vw;
+}
+
+/* main: properties as a container */
 main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
+/* main: makes "Projects" take up 100% of the page in the flexbox */
 main h2 {
     width: 100%;
 }
 
+/* main: card container positioning */
 .card {
     position: relative;
 }
 
+/* main: card h3 shared properties */
+.card h3 {
+    position: absolute;
+    padding: 2%;
+    background-color: var(--blue);
+    color: var(--text);
+    border-radius: var(--rad);
+}
+
+/* main: card h3 shared effect on hover */
+.card h3:hover {
+    text-decoration: underline;
+    background-color: var(--light-blue);
+}
+
+/* main: card image shared properties */
+.card img {
+    border-radius: var(--rad);
+    filter: blur(3px);
+}
+
+/* main: card image shared effect on hover */
+.card img:hover {
+    filter: blur(0);
+}
+
+/* main: individual card, h3, and image properties */
 #first-app {
     max-height: 40vw;
     width: 100%;
@@ -104,30 +145,14 @@ main h2 {
 }
 
 #first-app h3 {
-    position: absolute;
-    padding: 2%;
     top: 10%;
     left: 5%;
     font-size: 4vw;
-    background-color: var(--blue);
-    color: var(--text);
-    border-radius: var(--rad);
-}
-
-#first-app h3:hover {
-    text-decoration: underline;
-    background-color: var(--light-blue);
 }
 
 #first-app img {
     max-height: 40vw;
     width: 100%;
-    border-radius: var(--rad);
-    filter: blur(3px);
-}
-
-#first-app img:hover {
-    filter: blur(0);
 }
 
 #second-app, #third-app, #fourth-app, #fifth-app {
@@ -140,44 +165,30 @@ main h2 {
 }
 
 #second-app h3, #third-app h3, #fourth-app h3, #fifth-app h3 {
-    position: absolute;
-    padding: 2%;
     top: 10%;
     left: 10%;
     font-size: 2vw;
-    background-color: var(--blue);
-    color: var(--text);
-    border-radius: var(--rad);
-}
-
-#second-app h3:hover, #third-app h3:hover, #fourth-app h3:hover, #fifth-app h3:hover {
-    text-decoration: underline;
-    background-color: var(--light-blue);
 }
 
 #second-app img, #third-app img, #fourth-app img, #fifth-app img {
     max-height: 20vw;
     width: 100%;
-    border-radius: var(--rad);
-    filter: blur(3px);
 }
 
-#second-app img:hover, #third-app img:hover, #fourth-app img:hover, #fifth-app img:hover {
-    filter: blur(0);
-}
-
+/* footer: unordered list container flexbox */
 footer ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
+/* footer: individual list item properties */
 footer li {
     display: inline;
     margin-bottom: 3%;
 }
 
-/* Smartphone view */
+/* Smartphone view: larger font size, cards stack into one column, and larger card size*/
 @media screen and (max-width: 500px) {
     h1 {
         font-size: 8vw;
@@ -223,5 +234,4 @@ footer li {
     #second-app img, #third-app img, #fourth-app img, #fifth-app img {
         max-height: 30vw;
     }
-    
-  }
+}
